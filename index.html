@@ -2,64 +2,145 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World</title>
-    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+    <title>Josefine Flügge</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+
+    <!-- W3.CSS framework (animation) -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Google fonts import -->
+    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+
+     <link rel="stylesheet" type="text/css" href="style.css">
+
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="text/babel">
 
-      ReactDOM.render(
-        <h1>Hello, world!</h1>,
-        document.getElementById('root')
-      );
 
-    </script>
-    <!--
-      Note: this page is a great way to try React but it's not suitable for production.
-      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+  <body onload=loadPage() style="margin:0;">
 
-      To set up a production-ready React build environment, follow these instructions:
-      * https://reactjs.org/docs/add-react-to-a-new-app.html
-      * https://reactjs.org/docs/add-react-to-an-existing-app.html
+    <div id="loader"></div>
 
-      You can also use React without JSX, in which case you can remove Babel:
-      * https://reactjs.org/docs/react-without-jsx.html
-      * https://reactjs.org/docs/cdn-links.html
-    -->
+
+    <div class="container" style="display:none;" id="theContent" class="animate-bottom"> <!-- container: puts padding around everything it contains, container-fluid does not -->
+
+      <div class ="row">
+
+        <!-- LEFT COLUMN -->
+        <!-- number indicates how many of the 12 columns it takes up -->
+        <div id="column1" class="col-lg-6 col-md-6 col-sm-6 col-xs-12 w3-animate-left vcenter">
+
+          <div id="btngroup">
+            <h1><a class="btn-link1 btn-link" href="#" onclick="renderStart();return false;"><span> Hi,</span></a></h1>
+              <h1><a class="btn-link2 btn-link" href="#" onclick="renderStuff();return false;"><span> I did some stuff,</span></a></h1>
+                <h1><a class="btn-link3 btn-link" href="#" onclick="renderContact();return false;"><span> Contact me. </span></a></h1>
+          </div>
+
+        </div>
+
+
+        <!-- RIGHT COLUMN -->
+        <div id="column2" class="col-lg-6 col-md-6 col-sm-6 col-xs-12 w3-animate-right vcenter">
+
+          <!-- START PAGE -->
+              <div id="startContent" class="w3-animate-right" >
+
+                <img src="testfoto2.jpg" id="center-block" class="img-fluid rounded-circle">
+
+            </div>
+
+            <!-- Projectcontent -->
+              <div id="stuffContent" class="w3-animate-right" style="display: none">
+              <p class="smallfont">Här ska det vara lite projekt och sånt.</p>
+
+                <div class="row text-center text-lg-left">
+
+                  <div class="col-lg-6 col-md-6  col-sm-12  col-xs-12">
+
+                    <div class="projcontainer">
+                      <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid projimg" src="./project_thumbnails/testis_500x300.jpg" alt="">
+                      </a>
+                        <div class="overlay">
+                          <div class="projtext">Projektbeskrivning lalala detta skall säga lite kort vilket projekt det
+                                               handlar om och vilka språk en använt osv osv.</div>
+                        </div>
+                      </div>
+
+                  </div>
+
+
+                <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12">
+                  <div class="projcontainer">
+                    <a href="#" class="d-block mb-4 h-100">
+                      <img class="img-fluid projimg" src="./project_thumbnails/testis_500x300.jpg" alt="">
+                    </a>
+                      <div class="overlay">
+                        <div class="projtext">Projektbeskrivning</div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12">
+                  <div class="projcontainer">
+                    <a href="#" class="d-block mb-4 h-100">
+                      <img class="img-fluid projimg" src="./project_thumbnails/testis_500x300.jpg" alt="">
+                    </a>
+                      <div class="overlay">
+                        <div class="projtext">Projektbeskrivning</div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                  <div class="projcontainer">
+                    <a href="#" class="d-block mb-4 h-100">
+                      <img class="img-fluid projimg" src="./project_thumbnails/testis_500x300.jpg" alt="">
+                    </a>
+                      <div class="overlay">
+                        <div class="projtext">Projektbeskrivning</div>
+                      </div>
+                    </div>
+                </div>
+
+              </div>
+
+              <div id="contactContent" class="w3-animate-right" style:"display:none">
+
+            <p class="smallfont">Kontaktsidan!
+              In laoreet tincidunt nisl ac tincidunt. Maecenas scelerisque, nunc et faucibus finibus, ante dolor euismod est,
+              sed consectetur elit nulla sit amet mauris. Donec lobortis tortor ac accumsan lobortis. Cras maximus, risus egestas
+              accumsan sodales, turpis felis placerat ligula, vitae dignissim felis ipsum eget neque. Curabitur in eros semper, efficitur ex eget,
+              eleifend urna. Ut sodales faucibus ullamcorper. Integer sem turpis, congue vel erat at, vestibulum interdum dui.
+
+              Aliquam lorem diam, consectetur vitae consectetur vel, dignissim sit amet orci. Nunc pretium, est eget euismod pellentesque,
+              nunc neque tempus tortor, id sodales libero arcu et enim. Sed sodales, purus ut cursus imperdiet, dui felis volutpat dolor,
+              sed vehicula turpis enim mollis nunc. Praesent rutrum nec lectus non gravida. Maecenas et tempor nulla. Curabitur tristique turpis
+              sed lorem posuere mattis. Nam malesuada massa vel urna dignissim, nec fermentum sapien suscipit. In hac habitasse platea dictumst</p>
+
+              </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="js.js"></script>
+
   </body>
 </html><!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World</title>
-    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="text/babel">
-
-      ReactDOM.render(
-        <h1>Hello, world!</h1>,
-        document.getElementById('root')
-      );
-
-    </script>
-    <!--
-      Note: this page is a great way to try React but it's not suitable for production.
-      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
-
-      To set up a production-ready React build environment, follow these instructions:
-      * https://reactjs.org/docs/add-react-to-a-new-app.html
-      * https://reactjs.org/docs/add-react-to-an-existing-app.html
-
-      You can also use React without JSX, in which case you can remove Babel:
-      * https://reactjs.org/docs/react-without-jsx.html
-      * https://reactjs.org/docs/cdn-links.html
-    -->
-  </body>
-</html>
