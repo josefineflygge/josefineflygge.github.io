@@ -2,6 +2,14 @@ html, body, header, #bg {
   height: 100%;
 }
 
+p{
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+}
+
+
 
 #bg{
   background: url("./pics/bg2.png")no-repeat center center fixed;
@@ -10,36 +18,29 @@ html, body, header, #bg {
    -o-background-size: cover;
    background-size: cover;
 
+     transition:  300ms linear;
+
 }
 
-/*#bg.scrolled {
-  background: url("./pics/bg3.png") no-repeat center center fixed !important;
+#bg.scrolled {
+  background: url("./pics/bgwhite.png")no-repeat center center fixed; /*!important*/
   -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
    height:100%;
 
-  transition:  300ms linear;
-} */
-
-#navlinks a{
-  color: white;
-  text-decoration: none;
-font-family: 'Roboto', sans-serif;
+/*  transition:  300ms linear;*/
+    transition: background .4s ease;
 }
 
-button:hover {
-  color: black;
-}
+
+
 
 .josse{
   color: #92e2ad;
 }
 
-#navlinks a:hover{
-font-weight: bold;
-}
 
 #centerfix{
 display: flex;
@@ -47,24 +48,44 @@ display: flex;
  justify-content: center;
 }
 
+/** text attributes **/
 
-.smallfont{
+#smallfont{
   color: white;
   text-decoration: none;
-  font-size: 13px;
-  font-family: 'Overpass Mono', monospace;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
 }
 
-.whitefont{
 
+#smallfont.scrolled{
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
 }
+
 
 
 .mediumfont{
   color: white;
   text-decoration: none;
-  font-size: 16px;
-  font-family: 'Overpass Mono', monospace;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.mediumfontdark{
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.mediumfont.scrolled{
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .bigfont{
@@ -73,11 +94,12 @@ display: flex;
   font-family: 'Overpass Mono', monospace;
 }
 
-.monofont{
-  color: white;
+.bigfont.scrolled{
+  color:black;
   text-decoration: none;
-  font-family: 'Overpass Mono', monospace;
+font-family: 'Overpass Mono', monospace;
 }
+
 
 
 /* ALIGNING CONTENT IS HELL*/
@@ -156,6 +178,91 @@ to{ bottom:0; opacity:1 }
 display: none;
 }
 
+/* SCROLL DOWN BOUNCING BUTTON */
+
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.scrolltothis{
+
+}
+
+/*
+section {
+  height: 100vh;
+  width: 100%;
+  display: table;
+
+}
+section.ok{
+  background-color: #555;
+}
+*/
+
+.scroll-down {
+  opacity: 1;
+  -webkit-transition: all .5s ease-in 3s;
+  transition: all .5s ease-in 3s;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #FFF;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.scroll-down:before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 6px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 2px solid white;
+    border-width: 0px 0 2px 2px;
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
 
 /* HOVER EFFECT ON PROJECTS*/
 
@@ -198,4 +305,11 @@ display: none;
   -ms-transform: translate(-50%, -50%);
   text-align: center;
   font-family: 'Roboto', sans-serif;
+}
+
+/* LINKS IMAGES */
+.linkimg{
+  width: 50px;
+  margin-left: 10px;
+  margin-right:10px;
 }

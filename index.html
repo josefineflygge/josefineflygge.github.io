@@ -19,193 +19,202 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto+Mono|Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
 
       <!-- Cutom stylesheet-->
       <link rel="stylesheet" type="text/css" href="style.css">
 
   </head>
 
+
 <!-- BODY -->
   <body id="bg"> <!-- onload=loadPage() style="margin:0;" -->
 <!--  <div id="loader"></div>-->
 
-
   <!-- HEADER -->
   <header>
 
-                <!-- navbar -->
-                <nav class="navbar navbar-dark fixed-top navbar-expand-md justify-content-center">
-                <a href="/" class="navbar-brand d-flex w-50 mr-auto"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse w-100" id="navlinks">
-                    <ul class="navbar-nav w-100 justify-content-center">
-                      <!--  <li class="nav-item active">
-                            <h2><a class="nav-link" href="#">Hi</a><h2>
-                        </li>
-                        <li class="nav-item">
-                            <h2><a class="nav-link" href="//codeply.com">Projects</a></h2>
-                        </li>
-                        <li class="nav-item">
-                            <h2><a class="nav-link" href="#">Contact</a></h2>
-                        </li>
-                    </ul> -->
-                    <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-
-                    </ul>
-                </div>
-              </nav>
-              <!-- /navbar -->
-
         <!-- bg mask, can make bg darker -->
-        <div id="bg" class="view" >
+      <!--  <div id="introcontainer" > -->
           <!-- full width bg -->
         <div class="container-fluid full-bg-img d-flex align-items-center justify-content-center h-100  animate-bottom">
           <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-
+            <div class="col-lg-4 col-md-8 col-sm-4 col-xs-8">
                     <!-- Heading -->
-                    <h1 class="monofont">Hi! My name is <span class="josse">Josefine</span>.</h1>
-                    <p class="smallfont">I'm an M.Sc Student in Media Technology living in Norrköping, Sweden.
-                    I like coding and creating things that are interactive, userfriendly, and looks nice. Preferably in the form of a website, app or game.
-                    My dream is to work with something creative that brings value to people.
-                    Feel free to check out some of the stuff I've done or read <a class="josse" href="google.com">my resumé.</a></p>
-                    <div id="center-block" class="vcenter">
-                      <!-- START SECTION -->
+                    <h1 class="bigfont" >Hi! My name is <span class="josse">Josefine</span>.</h1>
+                    <p id="smallfont">I'm an M.Sc Student in Media Technology living in Norrköping, Sweden.
+                    I like coding and creating things that are interactive and user-friendly, preferably in the form of a website, app or game.
+                    Feel free to check out some of the stuff I've done and don't hesitate to contact me!</p>
 
-                  </div>
-                    <button type="button" class="btn btn-outline-light text-light"><span class="glyphicon glyphicon glyphicon-star"></span>Learn more</button>
+                    <a href="./documents/CV_JF.pdf" download ><img src="./pics/cv.png" class="linkimg"></a>
+                    <a href="https://www.linkedin.com/in/josefine-flygge/" target="_blank" ><img src="./pics/linkedin.png" class="linkimg"></a>
+                    <a href="https://github.com/josefineflygge" target="_blank" ><img src="./pics/github.png" class="linkimg"></a>
+                    <a href="mailto:jflygge@gmail.com?Subject=Hello!" target="_blank" ><img src="./pics/mail.png" class="linkimg"></a>
+
             </div>
+
+                  <a href="#" class="scroll-down" address="true"></a>
+
           </div>
         </div>
 
-        </div>
+  <!--    </div> -->
         <!-- /bg mask -->
 
   </header>
 
  <!-- main container -->
-  <main>
+  <main class="scrolltothis">
     <div class="container animate-bottom">
       <div class ="row">
-
-
-
 
 
           <div class ="row text-center align-items-center justify-content-center text-lg-left">
 
 
-            <div class="col-lg-10 col-md-5 col-sm-5 col-xs-5">
-                    <p class="bigfont">Hover for details.</p></br>
+            <div class="col-lg-12 col-md-4 col-sm-4 col-xs-5">
+                    <p class="mediumfontdark">Hover for details.</p></br>
                   </div>
 
 
-              <div class="col-lg-5 col-md-6 col-sm-12  col-xs-12">
+              <div class="col-lg-4 col-md-6 col-sm-12  col-xs-12">
 
                   <div class="projcontainer">
                     <a href="#" class="d-block mb-4 h-100">
                       <img class="img-fluid projimg" src="./pics/mumblr3.png" alt="">
                     </a>
+                  <a href="https://github.com/daviderixon/Krypteradchatt" target="_blank">
                       <div class="overlay">
-                        <div class="projtext"><b class="mediumfont">MUMBLR</b></br>For my bachelors project I contributed to the mobile application Mumblr: a kids chat app built on web of trust technology,
-                        which uses kryptography and QR-code scanning for integrity and authentication.</br></br>
-                      <b class="smallfont">{ React Native , Node.js, socket.io } Made in course: TNM094.</b></div>
+                        <div class="projtext"><b class="mediumfont">MUMBLR</b><p>Bachelors project. Mumblr is an encrypted chat app for kids built on web of trust technology,
+                        which uses QR-code scanning for authentication. Made in course: TNM094.<p>
+                      <p class="bigfont">{ React Native , Node.js, socket.io }</p></div>
                       </div>
                     </div>
 
                 </div>
 
-                <div class="col-lg-5 col-md-6  col-sm-12 col-xs-12">
+                <div class="col-lg-4 col-md-6  col-sm-12 col-xs-12">
                   <div class="projcontainer">
                     <a href="#" class="d-block mb-4 h-100">
                       <img class="img-fluid projimg" src="./pics/game.png" alt="">
                     </a>
                       <div class="overlay">
-                        <div class="projtext"><b class="mediumfont">2D GAME - WORK IN PROGRESS</b></br> I'm currently working on a 2D puzzle platformer game,
-                          where the player can alternate between two characters to solve puzzles that requires both their abilities.  </br></br>
-                      <b class="smallfont">{ Unity , C#, Adobe Photoshop }</b></div>
+                        <div class="projtext"><b class="mediumfont">2D GAME - WORK IN PROGRESS</b>
+                          <p>I'm currently working on a 2D platformer,
+                          where the player can alternate between two characters to solve tricky puzzles.</p>
+                      <b class="bigfont">{ Unity , C#, Adobe Photoshop }</b></div>
                       </div>
                     </div>
                 </div>
 
 
-              <div class="col-lg-5 col-md-6 col-xs-12">
+              <div class="col-lg-4 col-md-6 col-xs-12">
                 <div class="projcontainer">
                   <a href="#" class="d-block mb-4 h-100">
                     <img class="img-fluid projimg" src="./pics/omr.png" alt="">
                   </a>
+                  <a href="https://github.com/josefineflygge/OCR-Optical-Music-Recognition" target="_blank">
                     <div class="overlay">
-                      <div class="projtext"><b class="mediumfont">OPTICAL MUSIC RECOGNITION</b></br>A system that takes scanned images of sheet music as input, detects the notes using image recognition, and returns the notes as a string. Made in course: TNM034.</br></br>
-                    <b class="smallfont">{ Matlab }</b></div>
+                      <div class="projtext"><b class="mediumfont">OPTICAL MUSIC RECOGNITION</b>
+                        <p>
+                        A system that takes scanned images of sheet music as input and returns the detected notes as a string. Made in course: TNM034.</p></br>
+                    <b class="bigfont">{ Matlab }</b></div>
                     </div>
+                  </a>
                   </div>
               </div>
 
-              <div class="col-lg-5 col-md-6  col-sm-12 col-xs-12">
+
+
+              <div class="col-lg-4 col-md-6  col-sm-12 col-xs-12">
+                <div class="projcontainer">
+                  <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid projimg" src="./pics/ph.png" alt="">
+                  </a>
+                  <a href="https://www.facebook.com/pubhacket/" target="_blank">
+                    <div class="overlay">
+                      <div class="projtext"><b class="mediumfont">pubHack();</b><p>Along with two other students I founded the non-profit coding association pubHack, a meating place where code
+                         interested students can hang out, spend time on sideprojects and share knowledge.</p>
+                       </div>
+                    </div>
+                  </a>
+                  </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6  col-sm-12 col-xs-12">
                 <div class="projcontainer">
                   <a href="#" class="d-block mb-4 h-100">
                     <img class="img-fluid projimg" src="./pics/hired.png" alt="">
                   </a>
+                  <a href="#" target="_blank">
                     <div class="overlay">
-                      <div class="projtext"><b class="mediumfont">HIRED</b></br>A prototype for an app that blabla. Made in course: TDDE02.</br></br>
-                    <b class="smallfont">{ Adobe-XD }</b></div>
+                      <div class="projtext"><b class="mediumfont">HIRED</b>
+                        <p>An app prototype. Hired works as a digital billboard, where students can apply for small jobs and help individuals that lack the time or competence. Made in course: TDDE02.</p>
+                    <b class="bigfont">{ Adobe-XD }</b></div>
                     </div>
+                  </a>
                   </div>
               </div>
 
 
-
-
-              <div class="col-lg-5 col-md-6  col-sm-12 col-xs-12">
+              <div class="col-lg-4 col-md-6  col-sm-12 col-xs-12">
                 <div class="projcontainer">
                   <a href="#" class="d-block mb-4 h-100">
                     <img class="img-fluid projimg" src="./pics/website.png" alt="">
                   </a>
+                    <a href="#">
                     <div class="overlay">
-                      <div class="projtext"><b class="mediumfont">THIS WEBSITE</b></br>A simple portfolio website and a reminder to myself that I've acomplished something in life. </br></br>
-                    <b class="smallfont">{ HTML5, CSS, JavaScript, Bootstrap }</b></div>
+                      <div class="projtext"><b class="mediumfont">THIS WEBSITE</b>
+                        <p> </p>
+                    <b class="bigfont">{ HTML5, CSS, JavaScript, Bootstrap }</b></div>
                     </div>
                   </div>
               </div>
 
-              <div class="col-lg-5 col-md-6  col-sm-12 col-xs-12">
+              <div class="col-lg-4 col-md-6  col-sm-12 col-xs-12">
                 <div class="projcontainer">
                   <a href="#" class="d-block mb-4 h-100">
                     <img class="img-fluid projimg" src="./pics/connectify.png" alt="">
                   </a>
+                    <a href="#">
                     <div class="overlay">
-                      <div class="projtext"><b class="mediumfont">CONNECTIFY</b></br>Connectify is an imaginary company to which I made a graphic profile and a website prototype. Made in course: </br></br>
-                    <b class="smallfont">{ Adobe Illustrator, InDesign }</b></div>
+                      <div class="projtext"><b class="mediumfont">CONNECTIFY</b>
+                        <p>Connectify is an imaginary company to which I created a graphic profile and a website mockup. Made in course: TNM069</p>
+                    <b class="bigfont">{ Adobe Illustrator, InDesign }</b></div>
                     </div>
+                  </a>
                   </div>
               </div>
 
-              <div class="col-lg-5 col-md-6  col-sm-12 col-xs-12">
+              <div class="col-lg-4 col-md-6  col-sm-12 col-xs-12">
                 <div class="projcontainer">
                   <a href="#" class="d-block mb-4 h-100">
                     <img class="img-fluid projimg" src="./pics/globelen.png" alt="">
                   </a>
+                  <a href="http://elonolsson.github.io/3D-Global-Visualization/Globelen/main.html" target="_blank">
                     <div class="overlay">
-                      <div class="projtext"><b class="mediumfont">GLOBELEN</b></br>
-                        Made in course: TNM061.</br></br></br>
-                    <b class="smallfont">{ Three.js, WebGL }</b></div>
+                      <div class="projtext"><b class="mediumfont">GLOBELEN</b>
+                      <p>A simple visualization of statistics on a globe. Made in course: TNM061.</p>
+                    <b class="bigfont">{ Three.js, WebGL }</b></div>
                     </div>
+                  </a>
                   </div>
               </div>
 
-              <div class="col-lg-5 col-md-6  col-sm-12 col-xs-12">
+              <div class="col-lg-4 col-md-6  col-sm-12 col-xs-12">
                 <div class="projcontainer">
                   <a href="#" class="d-block mb-4 h-100">
                     <img class="img-fluid projimg" src="./pics/soundviz.png" alt="">
                   </a>
+                  <a href="https://elinlager.github.io/SoundViz2k17/" target="_blank">
                     <div class="overlay">
-                      <div class="projtext"><b class="mediumfont">SOUNDVIZ</b></br>Made in course: TFYA65.</br></br>
-                    <b class="smallfont">{ Three.js, WebGL }</b></div>
-                    </div>
+                      <div class="projtext"><b class="mediumfont">SOUNDVIZ</b><p>A 3D-Vizualisation of sound in the time and frequency domain. Made in course: TFYA65.</p>
+                    <b class="bigfont">{ Three.js, WebGL }</b></div>
+                  </div></a>
                   </div>
               </div>
+
+
 
           </div>
         </div>
