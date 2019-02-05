@@ -94,6 +94,12 @@ display: flex;
   font-family: 'Overpass Mono', monospace;
 }
 
+.bigfontdark{
+  color: black;
+  text-decoration: none;
+  font-family: 'Overpass Mono', monospace;
+}
+
 .bigfont.scrolled{
   color:black;
   text-decoration: none;
