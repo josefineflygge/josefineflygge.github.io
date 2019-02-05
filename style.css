@@ -12,7 +12,7 @@ html, body, header, #bg {
 
 }
 
-#bg.scrolled {
+/*#bg.scrolled {
   background: url("./pics/bg3.png") no-repeat center center fixed !important;
   -webkit-background-size: cover;
    -moz-background-size: cover;
@@ -21,7 +21,7 @@ html, body, header, #bg {
    height:100%;
 
   transition:  300ms linear;
-}
+} */
 
 #navlinks a{
   color: white;
@@ -33,7 +33,7 @@ button:hover {
   color: black;
 }
 
-#josse{
+.josse{
   color: #92e2ad;
 }
 
@@ -51,11 +51,24 @@ display: flex;
 .smallfont{
   color: white;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-family: 'Overpass Mono', monospace;
+}
+
+.whitefont{
+
+}
+
+
+.mediumfont{
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Overpass Mono', monospace;
 }
 
 .bigfont{
-  color: black;
+  color: white;
   text-decoration: none;
   font-family: 'Overpass Mono', monospace;
 }
@@ -171,12 +184,13 @@ display: none;
 }
 
 .projcontainer:hover .overlay {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .projtext {
   color: white;
-  font-size: 16px;
+  font-size: 12px;
+  width: 320px;
   position: absolute;
   top: 50%;
   left: 50%;
