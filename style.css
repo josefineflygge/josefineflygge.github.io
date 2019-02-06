@@ -57,7 +57,7 @@ section {
 }
 
 .scrollbtn span {
-  margin-top:150px;
+  margin-top:30%;
   position: absolute;
   left: 50%;
   width: 30px;
@@ -159,17 +159,6 @@ p{
 }
 
 
-
-/* Add animation to "page content" */
-
-#arrowbtn{
-  position: absolute;
-   width: 50px;
-   height: auto;
-}
-#arrowbtn:hover {
-  cursor: pointer;
-}
 
 /* HOVER EFFECT ON PROJECTS*/
 
