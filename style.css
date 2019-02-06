@@ -57,7 +57,7 @@ section {
 }
 
 .scrollbtn span {
-  margin-top:30%;
+  margin-top:25%;
   position: absolute;
   left: 50%;
   width: 30px;
@@ -205,7 +205,7 @@ p{
 
 /* LINKS IMAGES */
 .linkimg{
-  width: 50px;
+  width: 45px;
   margin-left: 10px;
   margin-right:10px;
 }
