@@ -1,14 +1,21 @@
-html, body, header, #bg {
+
+/** Layout **/
+html, body, section { /*  , #bg */
   height: 100%;
 }
 
-p{
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-  font-family: 'Raleway', sans-serif;
+html{
+  scroll-behavior: smooth;
 }
 
+section {
+  width: 100%;
+}
+
+#projects {
+  padding-top: 30px;
+  margin-bottom: 80px;
+}
 
 
 #bg{
@@ -29,28 +36,88 @@ p{
    -o-background-size: cover;
    background-size: cover;
    height:100%;
-
 /*  transition:  300ms linear;*/
     transition: background .4s ease;
 }
 
-
-
-
-.josse{
-  color: #92e2ad;
+/** scroll button *//
+.scrollbtn {
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  transition: opacity .3s;
+}
+.scrollbtn:hover {
+  opacity: .5;
+  cursor: pointer;
 }
 
-
-#centerfix{
-display: flex;
- flex-direction: column;
- justify-content: center;
+.scrollbtn span {
+  margin-top:150px;
+  position: absolute;
+  left: 50%;
+  width: 30px;
+  height: 50px;
+  margin-left: -15px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  box-sizing: border-box;
 }
+.scrollbtn span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: sdb10 2s infinite;
+  animation: sdb10 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb10 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb10 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 
 /** text attributes **/
 
-#smallfont{
+p{
   color: white;
   text-decoration: none;
   font-size: 14px;
@@ -58,14 +125,13 @@ display: flex;
 }
 
 
-#smallfont.scrolled{
-  color: black;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: 'Raleway', sans-serif;
+#josse{
+  color: #92e2ad;
 }
 
-
+#josse.scrolled{
+  color: #fff;
+}
 
 .mediumfont{
   color: white;
@@ -73,15 +139,7 @@ display: flex;
   font-size: 18px;
   font-family: 'Raleway', sans-serif;
 }
-
 .mediumfontdark{
-  color: black;
-  text-decoration: none;
-  font-size: 18px;
-  font-family: 'Raleway', sans-serif;
-}
-
-.mediumfont.scrolled{
   color: black;
   text-decoration: none;
   font-size: 18px;
@@ -93,181 +151,24 @@ display: flex;
   text-decoration: none;
   font-family: 'Overpass Mono', monospace;
 }
-
 .bigfontdark{
   color: black;
   text-decoration: none;
-  font-family: 'Overpass Mono', monospace;
-}
-
-.bigfont.scrolled{
-  color:black;
-  text-decoration: none;
-font-family: 'Overpass Mono', monospace;
+  font-weight: bold;
+  font-family: 'Raleway', monospace;
 }
 
 
-
-/* ALIGNING CONTENT IS HELL*/
-
-#center-block{      /* make links be in center without being centered(?)*/
-  margin-left:auto;
-  margin-right:auto;
-  display:block;
-  margin-bottom: 2em;
-  max-width: 100%;
-  max-height: 100%;
-  top: 50%;
-  left: 50%;
-}
-
-#center-info{
-  top: 50%;
-  left: 50%;
-}
-
-.vcenter{        /* make content in columns vertically centered*/
-  display: flex;
-  vertical-align: middle;
-}
-
-
-/*  LOADER ANIMATION N STUFF */
-/* Center the loader */
-#loader {
-position: absolute;
-left: 50%;
-top: 50%;
-z-index: 1;
-width: 150px;
-height: 150px;
-margin: -75px 0 0 -75px;
-border: 5px solid #fff;
-border-radius: 50%;
-border-top: 5px solid transparent;
-width: 120px;
-height: 120px;
--webkit-animation: spin 2s linear infinite;
-animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-0% { -webkit-transform: rotate(0deg); }
-100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-0% { transform: rotate(0deg); }
-100% { transform: rotate(360deg); }
-}
 
 /* Add animation to "page content" */
-.animate-bottom {
-position: relative;
--webkit-animation-name: animatebottom;
--webkit-animation-duration: 1s;
-animation-name: animatebottom;
-animation-duration: 1s
-}
 
-@-webkit-keyframes animatebottom {
-from { bottom:-100px; opacity:0 }
-to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom {
-from{ bottom:-100px; opacity:0 }
-to{ bottom:0; opacity:1 }
-}
-
-#theContent {
-display: none;
-}
-
-/* SCROLL DOWN BOUNCING BUTTON */
-
-
-*,
-:after,
-:before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.scrolltothis{
-
-}
-
-/*
-section {
-  height: 100vh;
-  width: 100%;
-  display: table;
-
-}
-section.ok{
-  background-color: #555;
-}
-*/
-
-.scroll-down {
-  opacity: 1;
-  -webkit-transition: all .5s ease-in 3s;
-  transition: all .5s ease-in 3s;
-}
-
-.scroll-down {
+#arrowbtn{
   position: absolute;
-  bottom: 30px;
-  left: 50%;
-  margin-left: -16px;
-  display: block;
-  width: 32px;
-  height: 32px;
-  border: 2px solid #FFF;
-  background-size: 14px auto;
-  border-radius: 50%;
-  z-index: 2;
-  -webkit-animation: bounce 2s infinite 2s;
-  animation: bounce 2s infinite 2s;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
+   width: 50px;
+   height: auto;
 }
-
-.scroll-down:before {
-    position: absolute;
-    top: calc(50% - 8px);
-    left: calc(50% - 6px);
-    transform: rotate(-45deg);
-    display: block;
-    width: 12px;
-    height: 12px;
-    content: "";
-    border: 2px solid white;
-    border-width: 0px 0 2px 2px;
-}
-
-@keyframes bounce {
-  0%,
-  100%,
-  20%,
-  50%,
-  80% {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
-    transform: translateY(-10px);
-  }
-  60% {
-    -webkit-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    transform: translateY(-5px);
-  }
+#arrowbtn:hover {
+  cursor: pointer;
 }
 
 /* HOVER EFFECT ON PROJECTS*/
@@ -303,14 +204,14 @@ section.ok{
 .projtext {
   color: white;
   font-size: 12px;
-  width: 320px;
+  width: 300px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 /* LINKS IMAGES */
@@ -318,4 +219,34 @@ section.ok{
   width: 50px;
   margin-left: 10px;
   margin-right:10px;
+}
+
+/*  LOADER ANIMATION N STUFF */
+/* Center the loader */
+/*
+#loader {
+position: absolute;
+left: 50%;
+top: 50%;
+z-index: 1;
+width: 150px;
+height: 150px;
+margin: -75px 0 0 -75px;
+border: 5px solid #fff;
+border-radius: 50%;
+border-top: 5px solid transparent;
+width: 120px;
+height: 120px;
+-webkit-animation: spin 2s linear infinite;
+animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
 }
