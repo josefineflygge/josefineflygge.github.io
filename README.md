@@ -1,2 +1,2 @@
 # josefineflygge
-Soon to be portfolio website
+Simple portfolio website
