@@ -209,7 +209,9 @@ p{
   margin-left: 10px;
   margin-right:10px;
 }
-
+.linkimg:hover{
+  opacity:0.5;
+}
 /*  LOADER ANIMATION N STUFF */
 /* Center the loader */
 /*
