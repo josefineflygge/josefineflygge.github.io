@@ -156,14 +156,23 @@ p{
 
 .bigfont{
   color: white;
+  font-size: 12px;
   text-decoration: none;
   font-family: 'Overpass Mono', monospace;
 }
+
 .bigfontdark{
   color: black;
   text-decoration: none;
   font-weight: bold;
   font-family: 'Raleway', monospace;
+}
+
+.titlefont {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  font-family: 'Overpass Mono', monospace;
 }
 
 
