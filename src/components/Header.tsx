@@ -2,7 +2,11 @@ import { Avatar, HStack, Flex, Link, Icon, Text } from "@chakra-ui/react";
 import { AiFillLinkedin, AiFillGithub, AiFillMessage } from "react-icons/ai";
 import React from "react";
 
-const Header = ({ handleScrollToProjects }) => {
+interface HeaderProps {
+  handleScrollToProjects: () => void;
+}
+
+const Header = ({ handleScrollToProjects }: HeaderProps) => {
   return (
     <Flex
       flexDir="column"

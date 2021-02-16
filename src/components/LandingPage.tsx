@@ -1,12 +1,18 @@
 import { Container, Text, Box, Flex, SimpleGrid } from "@chakra-ui/react";
-import React, { useRef, useEffect, useState } from "react";
+import React, {
+  useRef,
+  useEffect,
+  useState,
+  RefObject,
+  MutableRefObject,
+} from "react";
 import ExperienceCard from "./ExperienceCard";
 import Header from "./Header";
 import { projectsList } from "../constants/projects";
 
 const LandingPage = () => {
   const [darkBg, setDarkBg] = useState(true);
-  const projectListRef = useRef(null);
+  const projectListRef = useRef<HTMLDivElement>();
 
   useEffect(() => {
     const onScroll = () => {
@@ -21,7 +27,7 @@ const LandingPage = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [darkBg]);
 
-  const executeScroll = () => projectListRef.current.scrollIntoView();
+  const executeScroll = () => projectListRef.current?.scrollIntoView();
 
   const bgStyle = {
     bgColor: darkBg ? "#7A57DD" : "#fff",
@@ -37,7 +43,7 @@ const LandingPage = () => {
           <Header handleScrollToProjects={executeScroll} />
           <SimpleGrid
             pt={20}
-            ref={projectListRef}
+            ref={projectListRef as MutableRefObject<HTMLDivElement>}
             columns={{ base: 1, lg: 2 }}
             spacing={4}
           >

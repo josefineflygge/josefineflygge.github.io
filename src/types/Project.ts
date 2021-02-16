@@ -4,6 +4,6 @@ export interface Project {
   link?: string;
   title: string;
   description: string;
-  keywords?: string[];
+  keywords: string[];
 }
 
