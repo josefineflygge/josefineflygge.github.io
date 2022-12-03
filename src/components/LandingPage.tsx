@@ -3,7 +3,6 @@ import React, {
   useRef,
   useEffect,
   useState,
-  RefObject,
   MutableRefObject,
 } from "react";
 import ExperienceCard from "./ExperienceCard";
@@ -27,7 +26,6 @@ const LandingPage = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [darkBg]);
 
-  const executeScroll = () => projectListRef.current?.scrollIntoView();
 
   const bgStyle = {
     bgColor: darkBg ? "#7A57DD" : "#fff",
@@ -40,7 +38,7 @@ const LandingPage = () => {
     <Box {...bgStyle}>
       <Container p={8} maxW={["100vw", "90vw", "80vw"]}>
         <Flex flexDir="column" alignItems="center">
-          <Header handleScrollToProjects={executeScroll} />
+          <Header />
           <SimpleGrid
             pt={20}
             ref={projectListRef as MutableRefObject<HTMLDivElement>}

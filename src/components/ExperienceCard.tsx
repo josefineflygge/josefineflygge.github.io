@@ -14,7 +14,7 @@ const ExperienceCard = ({
   keywords,
 }: Project) => {
   return (
-    <Box maxW="md" overflow="hidden ">
+    <Box maxW="md" overflow="hidden">
       <Link href={link ?? "#"} cursor="pointer">
         <MDBView hover>
           <Image src={img} alt={title} className="img-fluid" />
